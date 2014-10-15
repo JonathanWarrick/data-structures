@@ -93,9 +93,9 @@ var makeBinarySearchTree = function(value){
 		treeLoop(this);
 	};
 
-	binarySearchTree.redistribute = function() {
-		binarySearchTree.breadthFirstLog(function(value) var array = []; array.push(value); return array;)
-	}
+	// binarySearchTree.redistribute = function() {
+	// 	binarySearchTree.breadthFirstLog(function(value) var array = []; array.push(value); return array;)
+	// }
 	
 	return binarySearchTree;
 };
