@@ -87,6 +87,18 @@ define([
       });
     });
 
+    describe('instantiation time behavior', function() {
+      it('executes at a reasonable speed for 1,000,000 instantiations', function() {
+        for (var i = 0; i < 1000000; i++) {
+          if(variant === 'pseudoclassical'){
+            stack = new instantiator();
+          } else {
+            stack = instantiator();
+          }
+        }
+      });
+    });
+
   });
 
   describe("queue", function() {
@@ -156,6 +168,18 @@ define([
         queue.dequeue();
         queue.enqueue('c');
         expect(queue.dequeue()).to.equal('b');
+      });
+    });
+
+    describe('instantiation time behavior', function() {
+      it('executes at a reasonable speed for 1,000,000 instantiations', function() {
+        for (var i = 0; i < 1000000; i++) {
+          if(variant === 'pseudoclassical'){
+            queue = new instantiator();
+          } else {
+            queue = instantiator();
+          }
+        }
       });
     });
 

@@ -51,5 +51,17 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should have methods named "addToHead", "removeTail" (extra credit)', function() {
+    expect(linkedList.addToHead).to.be.a("function");
+    expect(linkedList.removeTail).to.be.a("function");
+  });
+
+  it('should designate a new head when "addToHead" is called (extra credit)', function(){
+    linkedList.addToHead(4);
+    expect(linkedList.head.value).to.equal(4);
+    linkedList.addToHead(5);
+    expect(linkedList.head.value).to.equal(5);
+  });
+
   // add more tests here to test the functionality of linkedList
 });
